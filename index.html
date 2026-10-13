@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>For Sherni 💗 — From Tillu</title>
+<style>
+:root{--pink:#ff6f9f;--hot:#f04483;--rose:#ffe0eb;--cream:#fff9fb;--ink:#55253b;--lilac:#eee5ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;overflow-x:hidden}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:28px 18px;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 15%,#fff 0 4%,transparent 24%),linear-gradient(145deg,#fff0f5,#ffe1ee 50%,#f4eaff)}
+.hero-inner{position:relative;z-index:2;max-width:760px}
+.eyebrow{letter-spacing:.17em;text-transform:uppercase;font-size:.72rem;font-weight:800;color:#c54e7b}
+h1{font-size:clamp(3rem,10vw,6.5rem);line-height:.98;letter-spacing:-.06em;margin:18px 0;color:#9e315e}
+h2{font-size:clamp(2rem,6vw,3.4rem);letter-spacing:-.04em;line-height:1.05;margin:0 0 14px}
+.subtitle{font-size:clamp(1rem,3vw,1.25rem);max-width:550px;margin:0 auto 26px;line-height:1.7}
+.btn{border:0;border-radius:999px;padding:14px 22px;font-weight:800;background:var(--hot);color:white;box-shadow:0 9px 22px #ef448344;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 13px 28px #ef448355}
+.btn.secondary{background:white;color:#b53668;border:1px solid #ffd0e0;box-shadow:none}
+.heart{position:absolute;opacity:.65;animation:float 7s ease-in-out infinite;user-select:none;pointer-events:none}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-25px) rotate(9deg)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes rise{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+section{padding:78px 18px}
+.wrap{width:min(100%,1000px);margin:auto}
+.section-head{text-align:center;margin-bottom:32px}
+.kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.16em;color:#c54e7b;font-weight:900;margin-bottom:12px}
+.lead{max-width:650px;margin:0 auto;line-height:1.75;color:#87536a}
+.note{font-size:.9rem;color:#956b7d;line-height:1.6}
+.story{background:white}
+.memory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.memory{background:#fff7fa;border:1px solid #ffe0eb;border-radius:22px;padding:14px;box-shadow:0 8px 25px #7f31500b;min-width:0}
+.memory img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;background:linear-gradient(135deg,#ffe0eb,#eee5ff)}
+/* Portrait photos 4 and 5: show the entire photo so faces are never cropped. */
+.memory:nth-child(4) img,.memory:nth-child(5) img{aspect-ratio:auto;object-fit:contain;max-height:520px;background:#f7edf3}
+.memory h3{margin:13px 0 5px;font-size:1rem}
+.memory p{margin:0;color:#87536a;font-size:.9rem;line-height:1.55}
+.upload-panel{margin:22px auto 0;padding:18px;border:1.5px dashed #f2a9c2;border-radius:20px;text-align:center;background:#fffafd}
+input[type=file]{max-width:100%;margin:12px 0}
+.tiny{font-size:.82rem;color:#9a7181;line-height:1.5}
+.letter-section{background:linear-gradient(145deg,#fff0f5,#f4edff)}
+.letter-card{max-width:720px;margin:auto;text-align:center;background:#fff;border:1px solid #ffe0eb;border-radius:28px;padding:clamp(22px,5vw,44px);box-shadow:0 18px 50px #7d315015}
+.envelope{font-size:4rem;display:block;margin:4px auto 16px;animation:pulse 2.8s ease-in-out infinite}
+.letter-text{display:none;text-align:left;line-height:1.9;font-size:1.02rem;white-space:pre-line;margin-top:24px;padding-top:22px;border-top:1px solid #ffe0eb;animation:rise .5s ease}
+.letter-text.open{display:block}
+.future{background:#fff}
+.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.promise{padding:22px 16px;border-radius:20px;background:#fff3f8;text-align:center;border:1px solid #ffe1ec}
+.promise .emoji{font-size:2rem}
+.promise p{line-height:1.6;margin-bottom:0;color:#87536a}
+.final{background:linear-gradient(140deg,#fbe3ef,#f0e8ff);text-align:center}
+.final-card{max-width:760px;margin:auto;background:#ffffffc9;border:1px solid #fff;border-radius:30px;padding:clamp(24px,6vw,52px);box-shadow:0 15px 45px #6d31501a}
+.final-line{font-size:clamp(1.3rem,4vw,2rem);line-height:1.6;font-weight:800;color:#9e315e}
+.music-section{background:#fff;text-align:center}.music-card,.reasons-card{max-width:700px;margin:18px auto 0;padding:26px;border-radius:24px;background:linear-gradient(135deg,#fff3f8,#f4efff);border:1px solid #ffe0eb}.music-icon{font-size:3rem;animation:pulse 2s infinite}.music-status{min-height:24px;margin:12px 0;color:#87536a;font-size:.9rem}.reason-box{min-height:72px;display:grid;place-items:center;font-weight:800;font-size:1.15rem;line-height:1.6;color:#9e315e;padding:12px}.love-meter{height:10px;border-radius:99px;background:#ffe0eb;overflow:hidden;margin:16px 0}.love-meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff80aa,#b8a0f5);transition:width .5s}.small-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+footer{text-align:center;padding:26px 16px;color:#a36b83;font-size:.85rem;background:#fff9fb}
+.hidden{display:none!important}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}
+.confetti-piece{position:absolute;top:-20px;animation:fall 3.6s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(760deg);opacity:.15}}
+
+.play-zone{background:#fff8fc;text-align:center;padding:65px 18px}
+.play-wrap{width:min(100%,850px);margin:auto}
+.balloon-field{display:flex;justify-content:center;align-items:flex-end;gap:clamp(10px,4vw,32px);flex-wrap:wrap;min-height:190px;padding:25px 8px 12px}
+.balloon{position:relative;width:clamp(54px,10vw,82px);height:clamp(70px,13vw,105px);border:0;border-radius:52% 48% 48% 52%/48% 48% 52% 52%;box-shadow:inset -9px -8px 0 #0000000d,inset 8px 8px 0 #ffffff4a,0 8px 15px #7f315015;animation:balloonBob 2.5s ease-in-out infinite;transition:transform .18s,opacity .18s}
+.balloon::after{content:"";position:absolute;bottom:-9px;left:calc(50% - 5px);width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:10px currentColor solid}
+.balloon::before{content:"";position:absolute;top:100%;left:50%;height:34px;border-left:1.5px solid #b9a1b0;transform:rotate(3deg);transform-origin:top}
+.balloon span{font-size:1.2rem;color:#ffffffd9;text-shadow:0 1px 2px #0002}
+.balloon-pink{background:#ff80aa;color:#ff80aa}.balloon-purple{background:#b8a0f5;color:#b8a0f5;animation-delay:-.6s}.balloon-yellow{background:#ffd76d;color:#ffd76d;animation-delay:-1.1s}.balloon-blue{background:#83d8e8;color:#83d8e8;animation-delay:-.3s}.balloon-coral{background:#ff9b88;color:#ff9b88;animation-delay:-1.5s}
+.balloon.popped{animation:pop .25s ease forwards;pointer-events:none}
+@keyframes balloonBob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+@keyframes pop{0%{transform:scale(1);opacity:1}55%{transform:scale(1.4);opacity:.8}100%{transform:scale(.1);opacity:0}}
+.pop-message{min-height:30px;font-weight:800;color:#a43d68;margin:8px auto 20px}
+.star-playground{min-height:100px;max-width:520px;margin:18px auto 0;border:1px dashed #e7a7c2;border-radius:22px;background:#ffffff8c;display:flex;justify-content:space-evenly;align-items:center;cursor:pointer;overflow:hidden}
+.star-playground span{font-size:clamp(1.5rem,5vw,2.4rem);animation:twinkle 1.8s ease-in-out infinite}
+.star-playground span:nth-child(2){animation-delay:-.4s}.star-playground span:nth-child(3){animation-delay:-.9s}.star-playground span:nth-child(4){animation-delay:-1.2s}.star-playground span:nth-child(5){animation-delay:-.7s}
+@keyframes twinkle{0%,100%{opacity:.55;transform:scale(.8) rotate(-12deg)}50%{opacity:1;transform:scale(1.18) rotate(12deg)}}
+.flying-star{position:fixed;z-index:20;pointer-events:none;animation:starAcross 1.6s ease-out forwards}
+@keyframes starAcross{0%{transform:translate(0,0) scale(.4) rotate(0);opacity:0}15%{opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1.4) rotate(150deg);opacity:0}}
+.photo-slot{overflow:hidden}
+.photo-placeholder{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(135deg,#ffe0eb,#eee5ff);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;color:#9e315e;gap:7px}
+.photo-placeholder span{font-size:2rem}.photo-placeholder strong{font-size:1rem}.photo-placeholder small{font-size:.78rem;line-height:1.4;max-width:240px}
+@media(max-width:700px){.balloon-field{min-height:160px}.balloon::before{height:24px}}
+
+@media(max-width:700px){.memory-grid{grid-template-columns:1fr}.memory{display:grid;grid-template-columns:115px 1fr;gap:0 13px;align-items:center}.memory img{grid-row:span 2;aspect-ratio:1}.memory h3{margin-top:0}.promise-grid{grid-template-columns:1fr}.promise{display:flex;align-items:center;gap:14px;text-align:left}.promise .emoji{flex-shrink:0}.hero{min-height:92svh}section{padding:60px 16px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="confetti"></div>
+<header class="hero" id="home">
+  <span class="heart" style="font-size:42px;left:8%;top:16%">💗</span>
+  <span class="heart" style="font-size:28px;right:12%;top:20%;animation-delay:-2s">💖</span>
+  <span class="heart" style="font-size:36px;left:14%;bottom:18%;animation-delay:-4s">💕</span>
+  <span class="heart" style="font-size:32px;right:8%;bottom:14%;animation-delay:-1s">💘</span>
+  <div class="hero-inner">
+    <div class="eyebrow">A tiny universe, made just for you</div>
+    <h1>Happy Birthday,<br><span id="heroName">Sherni</span> 🦁💗</h1>
+    <p class="subtitle">Even when miles keep us apart, you still have the closest place to my heart.</p>
+    <button class="btn" id="openBtn">Open your surprise ✨</button>
+    <p class="tiny" style="margin-top:18px">Made with all my love, <strong>Tillu</strong></p>
+  </div>
+</header>
+
+
+<section class="play-zone" id="playZone">
+ <div class="play-wrap">
+  <div class="kicker">A tiny birthday game</div>
+  <h2>Pop the balloons, Sherni! 🎈</h2>
+  <p class="lead">Tap a balloon to pop it. Each pop releases a little birthday magic from Tillu.</p>
+  <div class="balloon-field" id="balloonField" aria-label="Interactive balloons">
+   <button class="balloon balloon-pink" aria-label="Pop pink balloon"><span>♥</span></button>
+   <button class="balloon balloon-purple" aria-label="Pop purple balloon"><span>✦</span></button>
+   <button class="balloon balloon-yellow" aria-label="Pop yellow balloon"><span>★</span></button>
+   <button class="balloon balloon-blue" aria-label="Pop blue balloon"><span>♥</span></button>
+   <button class="balloon balloon-coral" aria-label="Pop coral balloon"><span>✦</span></button>
+  </div>
+  <p class="pop-message" id="popMessage" aria-live="polite">Pop one to reveal a little message 💌</p>
+  <button class="btn secondary" id="moreBalloons">More balloons, please! 🎈</button>
+ </div>
+</section>
+
+<main id="mainContent" class="hidden">
+<section class="story" id="memories">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">Little pieces of us</div><h2>Our story, our memories 📸</h2><p class="lead">Some moments become memories. Some people become home. You somehow became both.</p></div>
+  <div class="memory-grid" id="memoryGrid">
+   <article class="memory photo-slot"><img alt="Tillu and Sherni on a video call" src="photo1.jpg"><h3>One of our early calls ❤️</h3><p>Even through a screen, being with you felt special.</p></article>
+   <article class="memory photo-slot"><img alt="Sherni in a bright pink dupatta" src="photo2.jpg"><h3>My favourite view is you 🥹❤️</h3><p>That peaceful smile of yours deserves its own little corner here.</p></article>
+   <article class="memory photo-slot"><img alt="Tillu and Sherni together in a favourite photo" src="photo3.jpg"><h3>My favourite person, my favourite team 🫶</h3><p>One frame, two hearts, and a memory that belongs to us.</p></article>
+   <article class="memory photo-slot"><img alt="A selfie of Tillu and Sherni together" src="photo4.jpg"><h3>If I could relive one day… 💗</h3><p>Some moments are special simply because they're with you.</p></article>
+   <article class="memory photo-slot"><img alt="Sherni in a beige hijab, holding her phone" src="photo5.jpg"><h3>My favourite little troublemaker 😘</h3><p>Every version of you has a place in my heart, Sherni. ❤️</p></article>
+  </div>
+  <p class="tiny" style="text-align:center;margin-top:22px">Every photo is a little piece of you that I wish I could keep close. 💗</p>
+ </div>
+</section>
+
+<section class="music-section" id="ourSong">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">A song for our little universe 🎶</div><h2>Press play, my Sherni 💗</h2><p class="lead">A little soundtrack for a love that travels farther than the distance between us.</p></div>
+  <div class="music-card">
+   <div class="music-icon" id="musicIcon">🎧💗</div>
+   <audio id="bgAudio" preload="metadata" loop><source src="song.mp3" type="audio/mpeg"></audio>
+   <audio id="specialAudio" preload="metadata"><source src="sherni-song.mp3" type="audio/mpeg"></audio>
+   <div class="small-actions"><button class="btn secondary" id="bgBtn">Turn background music on 🎵</button><button class="btn" id="specialBtn">Press play, my Sherni 💗</button></div>
+   <div class="small-actions"><button class="btn secondary" id="specialRestart">Play from the beginning ↺</button></div>
+   <p class="music-status" id="musicStatus" aria-live="polite">A soft birthday song can play in the background. Tap “Press play, my Sherni” for your special song. 💗</p>
+   <p class="tiny">Phone browsers may block autoplay, so the background music starts after you tap the surprise or its music button. The two songs won't play over each other.</p>
+  </div>
+ </div>
+</section>
+
+<section class="play-zone" id="reasons">
+ <div class="play-wrap">
+  <div class="kicker">A tiny game, just for you</div><h2>Tap for a reason I love you 💞</h2>
+  <p class="lead">Tap the heart whenever you need a reminder, Sherni.</p>
+  <div class="reasons-card"><div class="reason-box" id="reasonText" aria-live="polite">Ready for your first reason? 💗</div><div class="love-meter"><span id="loveMeter"></span></div><button class="btn" id="reasonBtn">Tell me why 💘</button><p class="tiny" id="reasonCount">0 little reminders opened</p></div>
+ </div>
+</section>
+
+<section class="letter-section" id="letter">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">A letter from Tillu</div><h2>For my Sherni 💌</h2><p class="lead">There's something I want you to open when you're ready.</p></div>
+  <div class="letter-card">
+   <span class="envelope">💌</span>
+   <h3 style="font-size:1.45rem;margin:0 0 10px">A little letter, just for you</h3>
+   <p class="note">No distance can make these words less true.</p>
+   <button class="btn" id="letterBtn">Open my letter 💗</button>
+   <div class="letter-text" id="letterText">My dearest Sherni,
+
+Happy birthday, meri jaan. ❤️
+
+If I could ask for one thing today, it would be to be right there beside you—to see your smile, make you laugh, hold you close, and make this day feel as special as you are to me.
+
+Being far away isn't always easy. There are moments when I wish a screen could turn into a doorway and the distance between us could disappear. But even on those days, loving you is one of the most beautiful parts of my life.
+
+I hope this new year brings you peace when things feel heavy, courage when life gets difficult, reasons to laugh until your cheeks hurt, and countless moments that remind you how wonderful you are.
+
+And whenever you miss me, come back to this little corner of the internet. Let it remind you that somewhere, Tillu is thinking of you, cheering for you, and looking forward to all the memories we still have to make.
+
+You are my favourite person, my Sherni, and a part of every future I dream about.
+
+Happy birthday, my love. Until I can celebrate beside you, here's a little piece of my heart.
+
+Forever yours,
+Tillu ❤️</div>
+  </div>
+ </div>
+</section>
+
+<section class="future">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">The chapters ahead</div><h2>Things I can't wait to do with you 🌷</h2><p class="lead">Our story isn't only made of the moments we've had. It's also made of all the little things waiting for us.</p></div>
+  <div class="promise-grid">
+   <div class="promise"><div class="emoji">🤗</div><div><strong>A real hug</strong><p>No screen, no distance. Just one long hug.</p></div></div>
+   <div class="promise"><div class="emoji">🌅</div><div><strong>Little adventures</strong><p>New places, silly pictures, and stories we'll tell again.</p></div></div>
+   <div class="promise"><div class="emoji">☕</div><div><strong>Ordinary days</strong><p>Doing absolutely nothing together—and loving it.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="final" id="finale">
+ <div class="wrap"><div class="final-card">
+  <div style="font-size:3.3rem;margin-bottom:14px">🎂💗🦁</div>
+  <div class="kicker">One last thing, birthday girl</div>
+  <h2>My favourite kind of magic is you.</h2>
+  <p class="final-line">Happy Birthday, Sherni!</p>
+  <p class="lead" style="margin:0 auto 24px">No matter how many miles are between us, you will always be worth every mile, every wait, and every wish.</p>
+  <button class="btn" id="celebrateBtn">Send some birthday magic ✨</button>
+  <p class="note" style="margin-top:18px">Psst… tap anywhere in this box to make stars appear ✨</p>
+  <div class="star-playground" id="starPlayground" role="button" tabindex="0" aria-label="Make wishing stars">
+    <span>🌟</span><span>✨</span><span>💫</span><span>⭐</span><span>✨</span>
+  </div>
+  <p style="margin:26px 0 0;font-weight:800;color:#9e315e">With all my love,<br>Tillu 💌</p>
+ </div></div>
+</section>
+</main>
+<footer>Made with 💗 by Tillu, especially for Sherni.</footer>
+<script>
+const $ = (id) => document.getElementById(id);
+function burst(count=55){
+  const box=$('confetti');
+  const symbols=['💗','💕','💖','✨','🌸','💘','🎉'];
+  for(let i=0;i<count;i++){
+    const el=document.createElement('span');
+    el.className='confetti-piece';
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+'%';
+    el.style.animationDelay=(Math.random()*.8)+'s';
+    el.style.fontSize=(14+Math.random()*20)+'px';
+    box.appendChild(el);
+    setTimeout(()=>el.remove(),4500);
+  }
+}
+$('openBtn').addEventListener('click',async()=>{
+  const main=$('mainContent'); main.classList.remove('hidden'); main.style.animation='rise .65s ease';
+  $('openBtn').textContent='Your surprise is open 💗'; $('openBtn').disabled=true;
+  main.scrollIntoView({behavior:'smooth'}); burst(35);
+  // Try starting the soft background track during this user gesture; some phones may still require a music-button tap.
+  try { bgAudio.volume=0.22; await bgAudio.play(); bgBtn.textContent='Pause background music ⏸️'; setMusicStatus('Soft birthday music is playing in the background. 💗'); }
+  catch(e) { setMusicStatus('Your surprise is open! Tap “Turn background music on” whenever you are ready. 🎵'); }
+});
+$('letterBtn').addEventListener('click',()=>{
+  const letter=$('letterText'); const isOpen=letter.classList.toggle('open');
+  $('letterBtn').textContent=isOpen?'Close my letter 💌':'Open my letter 💗';
+  if(isOpen) letter.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+$('celebrateBtn').addEventListener('click',()=>{burst(100);$('celebrateBtn').textContent='A million hugs for you! 💗';});
+const balloonMessages=[
+ 'A tiny kiss from Tillu 💋','You make my world brighter, Sherni ☀️','One day, I’ll pop these balloons beside you 🤗',
+ 'You’re my favourite person. Always. 💗','Birthday wish: one giant hug for you! 🫂','Distance is temporary; us is precious 💌','You deserve all the stars, birthday girl ✨'
+];
+let messageIndex=0;
+function wireBalloons(){
+ document.querySelectorAll('.balloon:not(.popped)').forEach(balloon=>{
+  if(balloon.dataset.wired==='yes') return; balloon.dataset.wired='yes';
+  balloon.addEventListener('click',()=>{
+   balloon.classList.add('popped'); $('popMessage').textContent=balloonMessages[messageIndex++%balloonMessages.length];
+   const rect=balloon.getBoundingClientRect();
+   for(let i=0;i<12;i++){const bit=document.createElement('span');bit.className='flying-star';bit.textContent=['✨','💗','🎉','⭐'][i%4];bit.style.left=(rect.left+rect.width/2)+'px';bit.style.top=(rect.top+rect.height/2)+'px';bit.style.setProperty('--dx',(Math.random()*150-75)+'px');bit.style.setProperty('--dy',(Math.random()*-130-15)+'px');document.body.appendChild(bit);setTimeout(()=>bit.remove(),1800);}
+  },{once:true});
+ });
+}
+wireBalloons();
+$('moreBalloons').addEventListener('click',()=>{
+ const field=$('balloonField'),colors=['pink','purple','yellow','blue','coral'];
+ for(let i=0;i<3;i++){const b=document.createElement('button');b.className='balloon balloon-'+colors[Math.floor(Math.random()*colors.length)];b.setAttribute('aria-label','Pop balloon');b.innerHTML='<span>♥</span>';field.appendChild(b);} wireBalloons();
+});
+function makeStars(){for(let i=0;i<22;i++){const star=document.createElement('span');star.className='flying-star';star.textContent=['✨','⭐','💫','💗'][Math.floor(Math.random()*4)];star.style.left=(Math.random()*95)+'vw';star.style.top=(35+Math.random()*60)+'vh';star.style.setProperty('--dx',(Math.random()*70-35)+'vw');star.style.setProperty('--dy',(-20-Math.random()*55)+'vh');star.style.fontSize=(14+Math.random()*20)+'px';document.body.appendChild(star);setTimeout(()=>star.remove(),1800);}}
+$('starPlayground').addEventListener('click',makeStars);
+$('starPlayground').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();makeStars();}});
+// Two-track music setup: song.mp3 is soft looping BGM; sherni-song.mp3 is the special button song.
+const bgAudio=$('bgAudio'), specialAudio=$('specialAudio'), bgBtn=$('bgBtn'), specialBtn=$('specialBtn');
+bgAudio.volume=0.22;
+let bgWanted=false;
+function setMusicStatus(message){$('musicStatus').textContent=message;}
+async function startBackground(){
+  bgWanted=true; bgAudio.volume=0.22;
+  try { await bgAudio.play(); bgBtn.textContent='Pause background music ⏸️'; if(specialAudio.paused) setMusicStatus('Soft birthday music is playing in the background. 💗'); }
+  catch(e) { bgBtn.textContent='Turn background music on 🎵'; setMusicStatus('Tap again to start the background song. Some phones require a direct tap to play audio.'); }
+}
+bgBtn.addEventListener('click',async()=>{
+ if(!bgAudio.paused){bgWanted=false;bgAudio.pause();bgBtn.textContent='Turn background music on 🎵';setMusicStatus('Background music paused.');}
+ else await startBackground();
+});
+specialBtn.addEventListener('click',async()=>{
+ if(!specialAudio.paused){specialAudio.pause();specialBtn.textContent='Press play, my Sherni 💗';setMusicStatus('Your special song is paused. Tap when you want to hear it again. 💗');return;}
+ bgWanted=bgWanted || !bgAudio.paused;
+ bgAudio.pause(); bgBtn.textContent='Turn background music on 🎵';
+ try { await specialAudio.play(); specialBtn.textContent='Pause my song ⏸️'; $('musicIcon').textContent='🎶💗'; setMusicStatus('Just for you, my Sherni… ❤️'); }
+ catch(e) { setMusicStatus('Could not play the special song. Check that sherni-song.mp3 is beside index.html.'); }
+});
+$('specialRestart').addEventListener('click',async()=>{
+ specialAudio.currentTime=0; bgAudio.pause(); bgBtn.textContent='Turn background music on 🎵';
+ try { await specialAudio.play(); specialBtn.textContent='Pause my song ⏸️'; $('musicIcon').textContent='🎶💗'; setMusicStatus('Your special song, from the beginning. 💗'); }
+ catch(e) { setMusicStatus('Check that sherni-song.mp3 is beside index.html, then try again.'); }
+});
+specialAudio.addEventListener('ended',()=>{
+ specialBtn.textContent='Press play, my Sherni 💗'; $('musicIcon').textContent='🎧💗';
+ setMusicStatus('Song finished — want to hear it again, Sherni? 💗');
+ if(bgWanted) startBackground();
+});
+bgAudio.addEventListener('error',()=>setMusicStatus('Background song missing: keep song.mp3 beside index.html.'));
+specialAudio.addEventListener('error',()=>setMusicStatus('Special song missing: keep sherni-song.mp3 beside index.html.'));
+const reasons=[
+ 'Because your smile can fix a difficult day. 😊','Because even an ordinary call with you feels special. 📱💗','Because you are strong — my Sherni. 🦁','Because I love the little things that make you, you. 🌷','Because distance has never made you less close to my heart. 💌','Because I can imagine a thousand happy tomorrows with you. 🌅','Because you are my favourite person to annoy and adore. 😘','Because being loved by you is a gift I never take for granted. 🎁','Because I want to celebrate your tiny wins and big dreams. ✨','Because my heart chooses you, again and again. ❤️'
+];
+let reasonIndex=0;
+$('reasonBtn').addEventListener('click',()=>{$('reasonText').textContent=reasons[reasonIndex%reasons.length];reasonIndex++;$('loveMeter').style.width=(Math.min(reasonIndex,reasons.length)/reasons.length*100)+'%';$('reasonCount').textContent=reasonIndex+' little reminder'+(reasonIndex===1?'':'s')+' opened 💗';if(reasonIndex%3===0)burst(12);if(reasonIndex>=reasons.length)$('reasonBtn').textContent='Read them again 💞';});
+</script>
+</body>
+</html>
